@@ -29,7 +29,7 @@ function validarRegalo(descripcionRegalo){
     if (descripcionRegalo.length === 0){
         return "El regalo debe tener al menos un caracter"
     }
-    if (descripcionRegalo.length > 100){
+    if (descripcionRegalo.length >= 100){
         return 'El regalo debe tener menos de 100 caracteres'
     }
     return ''

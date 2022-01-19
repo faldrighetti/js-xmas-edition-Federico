@@ -42,7 +42,7 @@ function probarValidarRegalo(){
     )
 
     console.assert(
-        validarRegalo('Come on come on come on, come on come on come on, number one party anthem, come on come on come on, before the moment is gone, number one party anthem yeah yeah')
+        validarRegalo('Quiero dos bicicletas, cuatro trencitos, doscientas pizzas y veinte empanadas de jamón y queso. Lo quiero todo ahora.')
         ===  'El regalo debe tener menos de 100 caracteres', 'validarRegalo no invalidó un pedido mayor a 99 caracteres'
     )
 
