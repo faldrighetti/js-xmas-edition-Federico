@@ -4,10 +4,6 @@ const nombre = $form.nombre.value
 const ciudad = $form.ciudad.value
 const descripcionRegalo = $form["descripcion-regalo"].value
 
-const errorNombre = validarNombre(nombre)
-const errorCiudad = validarCiudad(ciudad)
-//const errorDescripcionRegalo = validarRegalo(descripcionRegalo)
-
 function validarNombre(nombre){
     if (nombre.length === 0){
         return 'Este campo debe tener al menos un caracter';

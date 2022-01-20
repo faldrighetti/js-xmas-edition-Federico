@@ -53,3 +53,4 @@ function probarValidarRegalo(){
 
 probarValidarNombre();
 probarValidarCiudad();
+probarValidarRegalo();
