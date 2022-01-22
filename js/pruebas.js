@@ -18,11 +18,16 @@ function probarValidarNombre(){
     'La función no invalidó un nombre vacío')
 
     console.assert(
-        validarNombre('1111111111111111111111111111111111111111111111111111111111111111111111111111111') === 
+        validarNombre('11111111111111111111111111111111111111111111111111') === 
     'Este campo debe tener menos de 50 caracteres', 'La función no invalidó un nombre de 50 o más caracteres')
 
     console.assert(
-        validarNombre("Juan Perez") === '', 'La función validarNombre no validó un nombre correcto')
+        validarNombre('123123') === 'El campo nombre solo acepta letras',
+        'validarNombre no validó que el nombre solo tenga letras'
+    )
+
+    console.assert(
+        validarNombre("Juan ") === '', 'La función validarNombre no validó un nombre correcto')
 }
 
 function probarValidarCiudad(){
