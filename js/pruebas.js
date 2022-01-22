@@ -27,7 +27,7 @@ function probarValidarNombre(){
     )
 
     console.assert(
-        validarNombre("Juan ") === '', 'La función validarNombre no validó un nombre correcto')
+        validarNombre("Juan") === '', 'La función validarNombre no validó un nombre correcto')
 }
 
 function probarValidarCiudad(){
