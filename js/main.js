@@ -76,7 +76,7 @@ function manejarErrores(errores){
             $errores.appendChild($error)
 
         } else {
-            // TAREA: EN ESTE ELSE BORRAR EL CAMPO ADECUADO
+            // TAREA: EN ESTE ELSE BORRAR EL CAMPO ADECUADO PARA HACER EL PUNTO 2
             $form[llave].className = ''
         }
     })
@@ -97,6 +97,5 @@ Tarea clase 8:
 2- Arreglar bug del formulario, que cuando se envía la carta con algún error por segunda vez, se vuelven a imprimir
     los errores
 3- Hacer el último punto del nivel 1, donde el mensaje de éxito se muestra 5 segundos y se redirecciona a wishlist.html
-
 
 */
