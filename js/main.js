@@ -52,6 +52,7 @@ function validarFormulario(event){
     if(esExito){
         $form.className = 'oculto'
         document.querySelector('#exito').className = ''
+        enviarAWishlist()
     }
 
     event.preventDefault()
@@ -83,6 +84,14 @@ function manejarErrores(errores){
 
     return cantidadErrores
 }
+
+function enviarAWishlist(){
+    setTimeout( function(){
+        window.location.href = 'wishlist.html'}, 5000)
+}
+
+// 3. En 5 segundos vamos redireccionar al usuario a `wishlist.html`,
+// usando `setTimeout` y `window.location.href`.
 
 const $form = document.querySelector('#carta-a-santa')
 $form.onsubmit = validarFormulario;
