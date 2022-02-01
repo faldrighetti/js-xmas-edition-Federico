@@ -1,9 +1,9 @@
 function validarNombre(nombre){
     if (nombre.length === 0){
-        return 'Este campo debe tener al menos un caracter';
+        return 'El nombre debe tener al menos un caracter';
     }
     if (nombre.length >= 50){
-        return 'Este campo debe tener menos de 50 caracteres';
+        return 'El nombre debe tener menos de 50 caracteres';
     }
 
     if (!/^[a-z]+$/i.test(nombre)){
@@ -31,6 +31,7 @@ function validarRegalo(descripcionRegalo){
 }
 
 function validarFormulario(event){
+    borrarErroresAnteriores()
     const $form = document.querySelector('#carta-a-santa')
 
     const nombre = $form.nombre.value
@@ -52,7 +53,7 @@ function validarFormulario(event){
     if(esExito){
         $form.className = 'oculto'
         document.querySelector('#exito').className = ''
-        enviarAWishlist()
+        irAWishlist()
     }
 
     event.preventDefault()
@@ -73,11 +74,11 @@ function manejarErrores(errores){
             $form[llave].className = 'error'
 
             const $error = document.createElement('li');
+            $error.id ='error'
             $error.innerText = error
             $errores.appendChild($error)
 
         } else {
-            // TAREA: EN ESTE ELSE BORRAR EL CAMPO ADECUADO PARA HACER EL PUNTO 2
             $form[llave].className = ''
         }
     })
@@ -85,13 +86,17 @@ function manejarErrores(errores){
     return cantidadErrores
 }
 
-function enviarAWishlist(){
-    setTimeout( function(){
+function irAWishlist(){
+    setTimeout(function(){
         window.location.href = 'wishlist.html'}, 5000)
 }
 
-// 3. En 5 segundos vamos redireccionar al usuario a `wishlist.html`,
-// usando `setTimeout` y `window.location.href`.
+function borrarErroresAnteriores(){
+    const totalErrores = document.querySelectorAll('#error')
+    for(let i = 0; i < totalErrores.length; i++){
+        totalErrores[i].remove()
+    }
+}
 
 const $form = document.querySelector('#carta-a-santa')
 $form.onsubmit = validarFormulario;
@@ -103,8 +108,8 @@ Tarea clase 8:
     mostrar los errores en la interfaz de usuario y hacer lo mismo con el éxito.
     Escribir pruebas. 
     Las edades no pueden tener decimales.
-2- Arreglar bug del formulario, que cuando se envía la carta con algún error por segunda vez, se vuelven a imprimir
+X2- Arreglar bug del formulario, que cuando se envía la carta con algún error por segunda vez, se vuelven a imprimir
     los errores
-3- Hacer el último punto del nivel 1, donde el mensaje de éxito se muestra 5 segundos y se redirecciona a wishlist.html
+X3- Hacer el último punto del nivel 1, donde el mensaje de éxito se muestra 5 segundos y se redirecciona a wishlist.html
 
 */

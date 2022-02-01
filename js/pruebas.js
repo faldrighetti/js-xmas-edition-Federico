@@ -14,12 +14,12 @@ console.assert(sumar(1,2) === 3, 'La suma de 1+2 no da 3')
 
 function probarValidarNombre(){
     console.assert(
-        validarNombre('') === 'Este campo debe tener al menos un caracter',
+        validarNombre('') === 'El nombre debe tener al menos un caracter',
     'La función no invalidó un nombre vacío')
 
     console.assert(
         validarNombre('11111111111111111111111111111111111111111111111111') === 
-    'Este campo debe tener menos de 50 caracteres', 'La función no invalidó un nombre de 50 o más caracteres')
+    'El nombre debe tener menos de 50 caracteres', 'La función no invalidó un nombre de 50 o más caracteres')
 
     console.assert(
         validarNombre('123123') === 'El campo nombre solo acepta letras',
